@@ -24,7 +24,7 @@ public class ReportingStructure {
         this.numberOfReports = employee.getDirectReports().size();
     }
 
-    @GetMapping("/employee/{id}")
+    @GetMapping("/reporting_structure/employee/{id}")
     public List<Employee> read(@PathVariable String id) {
         LOG.debug("Received employee create request for id [{}]", id);
 
