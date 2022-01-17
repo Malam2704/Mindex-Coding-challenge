@@ -15,6 +15,7 @@ public class ReportingStructure {
     
     private Employee myEmployee;
     private List<Employee> directReportList;
+    private List<Employee> allReportsList;
     // total number of reports under a given employee ( see example in read me)
     private int numberOfReports;
 
@@ -22,12 +23,27 @@ public class ReportingStructure {
         this.myEmployee = employee;
         this.directReportList = employee.getDirectReports();
         this.numberOfReports = employee.getDirectReports().size();
+        this.allReportsList = new List<Employee>;
+    }
+
+    public void addEmployee(Employee thisEmployee){
+        if(anEmployee.getDirectReports.size < 1){
+            //Helper function to iterate over employee direct reports
+            allReportsList.add(thisEmployee);
+            return null;
+        }else{
+            addEmployee()
+        }
     }
 
     @GetMapping("/reporting_structure/employee/{id}")
     public List<Employee> read(@PathVariable String id) {
         LOG.debug("Received employee create request for id [{}]", id);
 
-        return directReportList;
+        for(int i=0; i < directReportList.size; i++){
+            Employee anEmployee = directReportList.get(i);
+
+            
+        }
     }
 }
