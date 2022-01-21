@@ -15,12 +15,13 @@ import org.slf4j.LoggerFactory;
 public class ReportingStructure {
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
 
+    // Fields/variables
     private Employee myEmployee;
     private List<Employee> directReportList;
     private List<Employee> allReportsList;
-
     private HashMap<Employee, Integer> employeeConnectionsMap;
 
+    // Cnonstructor
     public ReportingStructure(Employee employee) {
         this.myEmployee = employee;
         this.directReportList = employee.getDirectReports();
